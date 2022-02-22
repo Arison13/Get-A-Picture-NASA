@@ -23,6 +23,11 @@ function App() {
       <h4> Enter A Date To See The Picture That NASA Took On That Date</h4>      
       <SearchBar handleSubmit={handleSubmit} dateInput={dateInput} setDateInput={setDateInput} />
       <MainInfo state={state}/>
+      <footer> 
+        <p> Made By 
+          <a className='linkedIn' href='https://www.linkedin.com/in/arisonarias/' target="_blank" rel="noreferrer"> Arison Arias </a>
+        </p>
+      </footer>
     </div>
   );
 }

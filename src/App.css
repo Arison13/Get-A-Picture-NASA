@@ -6,3 +6,11 @@ img {
   height: 35em;
   /* object-fit: cover; */
 }
+footer{
+  margin-top: 2%;
+}
+.linkedIn {
+  font-weight: 700;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
