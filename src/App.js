@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import {useState} from 'react'
+import { API_KEY } from './utils';
+import SearchBar from './components/SearchBar';
+import MainInfo from './components/MainInfo';
 
 function App() {
+  const [state, setState] = useState([])
+  const [dateInput, setDateInput]= useState("")
+  // const isLoading = true;
+  //NEXT IS TO WORK ON A LOADING STATE TO SHOW WHILE GETTING THE DATA;
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${dateInput}`)
+    .then(res => {
+      setState(res.data)
+    }).catch(err => console.log(err))
+  }
+  // {new Date().getFullYear()} 
+  //NEED TO ADD TODAYS DATE DINAMICALLY
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>WELCOME</h1>
+      <h4> Enter A Date To See The Picture That NASA Took On That Date</h4>      
+      <SearchBar handleSubmit={handleSubmit} dateInput={dateInput} setDateInput={setDateInput} />
+      <MainInfo state={state}/>
     </div>
   );
 }

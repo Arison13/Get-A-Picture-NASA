@@ -1,0 +1,32 @@
+form {
+    width: 100%;         
+    /* margin-bottom: 5rem; */
+}
+
+input {
+    width: 15rem;
+    padding: .75rem;
+    border-radius: 14px; 
+    background-color: black;
+    color: white;
+    margin: 0 1rem
+}
+input:hover, button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+button{
+    padding: .75rem;
+    width: 8rem;
+    border-radius: 14px;
+    background-color: black;
+    color: white;
+    
+}
+span{
+    color: rgb(213, 27, 27);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: small;
+}
