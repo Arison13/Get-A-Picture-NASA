@@ -1,25 +1,22 @@
 import './App.css';
 import axios from 'axios';
 import {useState} from 'react'
-import { API_KEY } from './utils';
 import SearchBar from './components/SearchBar';
 import MainInfo from './components/MainInfo';
 
 function App() {
   const [state, setState] = useState([])
   const [dateInput, setDateInput]= useState("")
-  // const isLoading = true;
-  //NEXT IS TO WORK ON A LOADING STATE TO SHOW WHILE GETTING THE DATA;
-  
+  // const isLoading = true; NEXT IS TO WORK ON A LOADING STATE TO SHOW WHILE GETTING THE DATA;
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${dateInput}`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${dateInput}`)
     .then(res => {
       setState(res.data)
     }).catch(err => console.log(err))
   }
-  // {new Date().getFullYear()} 
-  //NEED TO ADD TODAYS DATE DINAMICALLY
+  
   return (
     <div className="App">
       <h1>WELCOME</h1>
