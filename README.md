@@ -3,4 +3,4 @@
 
 ### The date must have the following format: YYYY-MM-DD 
 
-## If you have any recommendations feel free to reach out to me, my Linkedin is posted on my Bio. **
+### If you have any recommendations feel free to reach out to me, my Linkedin is posted on my Bio.
