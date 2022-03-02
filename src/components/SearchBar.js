@@ -2,12 +2,12 @@ import React from 'react'
 import './SearchBar.css'
 
 function SearchBar(props) {
-
   return (
    <form onSubmit={props.handleSubmit}> 
         <input placeholder='YYYY-MM-DD' 
         value={props.dateInput} onInput={e => props.setDateInput(e.target.value)} 
-        onSubmit={props.handleSubmit}/>
+        onSubmit={props.handleSubmit}
+        type="date"/>
         <button> Search </button>
         <p> <span>Must be after 1995-06-16</span></p>
     </form>
