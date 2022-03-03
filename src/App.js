@@ -1,13 +1,33 @@
 import './App.css';
 import axios from 'axios';
-import {useState} from 'react'
+import { useEffect, useState } from 'react'
 import SearchBar from './components/SearchBar';
 import MainInfo from './components/MainInfo';
 
 function App() {
   const [state, setState] = useState([])
   const [dateInput, setDateInput]= useState("")
+  const [isLoading, setIsLoading]= useState(true);
   // const isLoading = true; NEXT IS TO WORK ON A LOADING STATE TO SHOW WHILE GETTING THE DATA;
+  // const checkLoading = () => {
+  //   if (state == []){
+  //     // setIsLoading(true)
+  //     return isLoading
+  //   } 
+  //   else {
+  //     setIsLoading(false)
+  //   }
+  //   return isLoading
+  // }
+  // console.log(isLoading)
+
+  // useEffect(()=> {
+  //     // e.preventDefault();
+  //     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${dateInput}`)
+  //     .then(res => {
+  //       setState(res.data)
+  //     }).catch(err => console.log(err))
+  // }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +39,7 @@ function App() {
   
   return (
     <div className="App">
+      
       <h1>WELCOME</h1>
       <h4> Enter A Date To See The Picture That NASA Took On That Date</h4>      
       <SearchBar handleSubmit={handleSubmit} dateInput={dateInput} setDateInput={setDateInput} />

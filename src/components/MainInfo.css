@@ -15,7 +15,7 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 450px){
 	/*Small smartphones [325px -> 425px]*/
     .main {
         width: 100vw;
@@ -31,5 +31,18 @@
     .explanation-section {
         height: 50%;
         width: 100vw;
+    }
+}
+@media screen and (max-width: 850px){
+    .main {
+        display: block;
+    }
+    img {
+        width: 30rem;
+        height: 25rem;
+    }
+    .explanation-section {
+        height: 50%;
+        width: 100%;
     }
 }
