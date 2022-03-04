@@ -21,7 +21,6 @@
         width: 100%;
         display: block;
         text-align: center;
-        border: 3px solid green;
     }
     img{
         width: 20rem;
@@ -30,6 +29,5 @@
     }
     .explanation-section {
         width: 100%;
-        border: 1px solid blue;
     }
 }
