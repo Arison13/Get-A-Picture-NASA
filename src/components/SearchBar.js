@@ -1,22 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SearchBar.css'
 
-function SearchBar(props) {
-  
+function SearchBar({currentDate,handleGetToday,dateInput, handleSubmit, setDateInput}) {
+  // const [error, setError] = useState(null)
+  const dateLimit = "1995-06-16"
   return (
-   <form onSubmit={props.handleSubmit}> 
+   <form onSubmit={handleSubmit} > 
       <div className='bar'>
         <input placeholder='Enter Date' 
-          value={props.dateInput} 
-          onInput={e => props.setDateInput(e.target.value)} 
-          onSubmit={props.handleSubmit}
-          type="date"/>
+          value={dateInput} 
+          onInput={e => setDateInput(e.target.value)} 
+          onSubmit={handleSubmit}
+          type="date"
+          max={currentDate}
+          min={dateLimit}
+          />
+          <p> <span>Must be after 1995-06-16</span></p>
       </div>
+
       <div className='btns'>
         <button> Search </button> 
-        <button onClick={props.handleSubmit}> Get Today</button>
+        <button onClick={handleGetToday}> Get Today</button>
       </div>
-        <p> <span>Must be after 1995-06-16</span></p>
+        
     </form>
   )
 }

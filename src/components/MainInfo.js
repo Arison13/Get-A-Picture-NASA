@@ -2,10 +2,10 @@ import React from 'react'
 import './MainInfo.css'
 
 function MainInfo(props) {
-    let state = `Date Posted: ${props.state.date}`
+    let datePosted = `Date Posted: ${props.state.date}`
 
     if(!props.state.date){
-        state = ""
+        datePosted = ""
     }
     
   return (
@@ -14,7 +14,7 @@ function MainInfo(props) {
         <div className='explanation-section'> 
             <p className='title'> {props.state.title}</p>
             <p className='explanation'> {props.state.explanation}</p>
-            <p className='date'>{state}</p>
+            <p className='date'>{datePosted}</p>
         </div> 
     </div>
         
