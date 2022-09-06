@@ -1,21 +1,30 @@
 import React from 'react'
 import './MainInfo.css'
 
-function MainInfo(props) {
-    let datePosted = `Date Posted: ${props.state.date}`
+function MainInfo({state}) {
+    // let datePosted = `Date Posted: ${state.state.date}`
 
-    if(!props.state.date){
-        datePosted = ""
-    }
+    // if(!state.date){
+    //     datePosted = ""
+    // }
     
   return (
     <div className='main'> 
-        <img src={props.state.hdurl} alt={props.state.title}/>
-        <div className='explanation-section'> 
-            <p className='title'> {props.state.title}</p>
-            <p className='explanation'> {props.state.explanation}</p>
-            <p className='date'>{datePosted}</p>
-        </div> 
+    <div className='main-info'> 
+      <a href={state.url}>
+        <img src={state.hdurl} alt={state.title}/>
+      </a>
+      <div className='explanation-section'> 
+          <p className='title'> {state.title}</p>
+          <p className='explanation'> {state.explanation}</p>
+          <p className='date'>{state.date}</p>
+      </div> 
+    </div>
+      <footer> 
+        <p> Made By 
+          <a className='linkedIn' href='https://www.linkedin.com/in/arisonarias/' target="_blank" rel="noreferrer"> Arison Arias </a>
+        </p>
+      </footer>
     </div>
         
   )

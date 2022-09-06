@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './SearchBar.css'
 
 function SearchBar({currentDate,handleGetToday,dateInput, handleSubmit, setDateInput}) {
-  // const [error, setError] = useState(null)
-  const dateLimit = "1995-06-16"
+
+  const dateLimit = "1995-06-16";
+  
   return (
    <form onSubmit={handleSubmit} > 
       <div className='bar'>
-        <input placeholder='Enter Date' 
+        <input 
+          placeholder='Search for your favorite date' 
           value={dateInput} 
           onInput={e => setDateInput(e.target.value)} 
           onSubmit={handleSubmit}
