@@ -48,7 +48,7 @@ span{
         /* border: 1px solid orange; */
     }
     input {
-        width:70%;
+        width:100%;
         padding: .80rem;
         border-radius: 10px; 
         background-color: black;
