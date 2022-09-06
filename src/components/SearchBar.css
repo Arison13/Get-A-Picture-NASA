@@ -50,7 +50,7 @@ span{
     input {
         min-width: 20em;
         width:20em;
-        padding: .80rem;
+        min-height: 2em;
         border-radius: 10px; 
         background-color: black;
         color: white;
