@@ -1,3 +1,6 @@
+body, *{
+  font-family: 'Lato', sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -15,7 +18,3 @@ footer{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.App > h1, h4 {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
-  width: 100vw;
-}
