@@ -1,20 +1,22 @@
 form {
-    width: 100%;      
+    width: 100%;   
+    box-sizing: border-box;
+    margin-bottom: 2rem;
 }
 
 input {
-    width: 15rem;
-    padding: .75rem;
-    border-radius: 14px; 
+    width:20%;
+    padding: .80rem;
+    border-radius: 10px; 
     background-color: black;
     color: white;
-    margin: 0 1rem
+    text-align: center;
+    margin: 0 1rem;
 }
 input:hover, button:hover {
     background-color: lightblue;
     color: black;
 }
-
 button{
     margin: .50rem 1rem;
     padding: .75rem;
@@ -29,4 +31,30 @@ span{
     font-weight: 700;
     font-size: small;
     border-bottom: .75px solid black;
+}
+
+@media screen and (max-width: 450px){ 
+    form {
+        width: 100%;   
+        box-sizing: border-box;   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }   
+    .bar{
+        width: 100%;
+        /* border: 1px solid orange; */
+    }
+    input {
+        width:70%;
+        padding: .80rem;
+        border-radius: 10px; 
+        background-color: black;
+        color: white;
+        text-align: center;
+        margin: 0 1rem;
+    }
+    
 }

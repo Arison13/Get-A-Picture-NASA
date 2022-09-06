@@ -54,7 +54,7 @@ function App() {
         setDateInput={setDateInput} 
       />
       
-      {error && <h2> ERROR! <br/> Please choose a date to continue </h2>}
+      {error && <h2> ERROR! <br/> Please choose a valid date to continue </h2>}
      
       {
         state ? <MainInfo state={state}/> : <h4>Choose a date to see what picture did APOD feature on your birthday!</h4>
