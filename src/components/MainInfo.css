@@ -8,9 +8,14 @@
     align-items: center;
     width: 100%;
 }
+.title{
+    text-align: center;
+}
 .explanation-section{
     font-family: 'Lato', sans-serif;
+    line-height: 1.5rem;
     width: 40%;  
+    text-align: start;
 }
 .explanation, .date{
     width: 100%;
