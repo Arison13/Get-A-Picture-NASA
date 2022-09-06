@@ -8,7 +8,7 @@ function MainInfo({state}) {
   return (
     <div className='main'> 
     <div className='main-info'> 
-      <a href={state.url} target="_blank" rel="noreferrer">
+      <a className="image-link" href={state.url} target="_blank" rel="noreferrer">
         { 
           state.media_type === "video" 
           ? <VideoPlayer state={state}/>
