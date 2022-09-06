@@ -43,7 +43,6 @@ function App() {
   
   return (
     <div className="App">
-      <h1>WELCOME</h1>
       <h4> Enter A Date To See The Picture That NASA Took On That Date</h4>      
       <SearchBar 
         errorState={error}
