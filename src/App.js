@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState(false)
   const currentDate = handleDate(); 
 
-
+// AGOSTO 9
   const handleSubmit = (e) => {
     e.preventDefault();
     if(!dateInput){

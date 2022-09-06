@@ -22,16 +22,21 @@
 @media screen and (max-width: 450px){
 	/*Small smartphones [325px -> 425px]*/
     .main {
+        margin-top: 5rem;
+    }
+    .main-info {
+        flex-direction: column;
         width: 100%;
         display: block;
         text-align: center;
     }
     img{
-        width: 20rem;
+        width: 100%;
         height: 20rem;
         object-fit: cover;
     }
     .explanation-section {
         width: 100%;
+        text-align: center;
     }
 }

@@ -2,16 +2,11 @@ import React from 'react'
 import './MainInfo.css'
 
 function MainInfo({state}) {
-    // let datePosted = `Date Posted: ${state.state.date}`
-
-    // if(!state.date){
-    //     datePosted = ""
-    // }
     
   return (
     <div className='main'> 
     <div className='main-info'> 
-      <a href={state.url}>
+      <a href={state.url} target="_blank" rel="noreferrer">
         <img src={state.hdurl} alt={state.title}/>
       </a>
       <div className='explanation-section'> 
