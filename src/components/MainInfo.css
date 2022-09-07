@@ -7,6 +7,8 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
 }
 .image-link{
     width:50%;
@@ -14,30 +16,37 @@
     min-height: 20rem;
     min-width: 30%;
 }
-.title{
-    text-align: center;
+.main-info img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
+
 .explanation-section{
     font-family: 'Lato', sans-serif;
     line-height: 1.5rem;
     width: 40%;  
     text-align: start;
+    padding: .50rem .75rem;
 }
 .explanation, .date{
     width: 100%;
 }
 .title, .date{
     font-weight: 700;
+    text-align: center;
 }
 
 @media screen and (max-width: 450px){
 	/*Small smartphones [325px -> 425px]*/
     .main {
         margin-top: 5rem;
+        justify-content: space-between;
     }
     .main-info {
         flex-direction: column;
         width: 100%;
+        height: auto;
         display: block;
         text-align: center;
     }
